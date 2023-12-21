@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <title>Портфолио</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav main-nav">
+        <ul class="main-nav__list main-list">
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#home">Глобальное потепление</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#about">Про ужасы глобального потепления</a>
+          </li>
+          <li class="main-list__item list-item">
+            <a class="list-item__link" href="#skills">Картинки с гиперссылками на последсвия и тд</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <!-- Секция превью -->
+      <section class="main__home home" id="home">
+        <h1 class="home__title">Планетарный Кризис: Игра с Огнем - Глобальное Потепление и Наша Борьба за Будущее Земли </h1>
+        <p class="home__subtitle">вызов, который мы вместе можем принять
+
+        </p>
+        <p class ="home_subtitle2">Сейчас наш выбор становится важнее: от привычек потребления до поддержки чистых технологий.
+          Давайте обнажим сущность вызова глобального потепления и вместе напишем новую главу в истории нашей планеты,
+           где ответственность и устойчивость станут нормой, а не исключением.
+          </p>
+      </section>
+      <!-- Секция с рассказом о себе -->
+      <section class="main__about about" id="about">
+        <h2 class="about__title">Глобальное потепление, его Последствия</h2>
+        <div class="about__info info-block">
+          <p class="info-block__text">
+            Глобальное потепление — это явление повышения средней температуры на поверхности Земли.
+             Оно обусловлено увеличением концентрации парниковых газов в атмосфере, таких как углекислый газ и метан.
+              Эти газы удерживают тепло от Солнца, что приводит к усилению парникового эффекта и изменению климата.
+
+              Последствия глобального потепления включают резкое изменение погоды, учащение экстремальных явлений (засух, наводнений, ураганов),
+               поднятие уровня мирового океана из-за таяния льдов, угрозу биоразнообразию,
+                а также негативное воздействие на сельское хозяйство.
+
+                Мировые усилия направлены на сокращение выбросов парниковых газов, разработку и внедрение экологически чистых технологий,
+                 а также адаптацию обществ к неизбежным изменениям в климате.
+                  Глобальное потепление требует совместных усилий стран и общества для сохранения пригодности планеты для будущих поколений.
+          </p>
+          <img
+            class="info-block__img"
+            src="../static/img/wepik.png"
+            alt="me"
+            width="250"
+            height="250"
+          />
+        </div>
+      </section>
+      <!-- Секция со скиллами -->
+      <section class="main__skills skills" id="skills">
+        <h2 class="skills__title">Ссылки на сайты с полезной информацией о глобальном потеплении</h2>
+        <form action="/" method="POST">
+          <ul class="skills__list skills-list">
+            
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/iceicell.jpg"
+                alt="python"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Сайт ООН</span>
+              <input class="skill__button" type="submit" name="button_python" value="ОТКРЫТЬ САЙТ">
+            </li>
+
+
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/vanara_frank.png"
+                alt="discord"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">National Geographic</span>
+              <input class="skill__button" type="submit" name="button_discord" value="ОТКРЫТЬ САЙТ">
+            </li>
+
+
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/bsl.png"
+                alt="html"
+                width="150"
+                height="150"
+              />
+              <span class="skill__info">Tass</span>
+              <input class="skill__button" type="submit" name="button_html" value="ОТКРЫТЬ САЙТ">
+            </li>
+
+
+            <li class="skills-list__skill skill">
+              <img
+                class="skill__img"
+                src="../static/img/iceicell22.png"
+                alt="SQL"
+                width="150"
+                height="150"
+                />
+                <span class="skill__info">NASA</span>
+                <input class="skill__button" type="submit" name="button_html" value="ОТКРЫТЬ САЙТ">
+              </li>
+
+
+          </ul>
+        </form>
+        {% if button_python%}
+        <div class="skills__project project" id="project">
+          <img class="project__img" src="../static/img/ooooddd.png"alt="project"width="500">
+          <a class="project__link"     
+           href="https://www.un.org/ru/global-issues/climate-change">Открыть сайт</a>
+      </div>
+        {% endif %}
+
+        {% if button_discord%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/casas.png"alt="project"width="500">
+              <a class="project__link"     
+               href="https://education.nationalgeographic.org/resource/global-warming/">Открыть сайт</a>
+          </div>
+          {% endif %}
+
+          {% if button_html%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/sdfff.png"alt="project"width="500">
+              <a class="project__link"     
+               href="https://tass.ru/spec/climate">Открыть сайт</a>
+          </div>
+          {% endif %}
+
+          {% if button_db%}
+          <div class="skills__project project" id="project">
+              <img class="project__img" src="../static/img/db.png"alt="project"width="500">
+              <a class="project__link"     
+               href="https://climate.nasa.gov/what-is-climate-change/">Открыть сайт</a>
+          </div>
+          {% endif %}
+      </section>
+      <!-- Секция с формой обратной связи -->
+      <section class="main__feedback feedback" id="feedback">
+        <h2 class="feedback__title">FEEDBACK</h2>
+        <form action="" method="POST" class="feedback__form form">
+          <label for="email">
+            <input type="email" class="form__input" name="email" id="email" placeholder="Введите E-mail" required>
+          </label>
+          <label for="text">
+            <textarea name="text" class="form__input" id="text" cols="70" rows="10" required placeholder="Комментарий"></textarea>
+          </label>
+          <button class="form__button" type="submit">ОТПРАВИТЬ</button>
+        </form>
+      </section>
+    </main>
+    <!-- Подвал для ссылок на соц-сети -->
+    <footer>
+
+    </footer>
+  </body>
+</html>
